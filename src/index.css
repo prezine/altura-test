@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-primary {
+      @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+    }
+    .trans-all-500-ease-in-out{
+      @apply transition-all duration-500 ease-in-out
+    }
+    .text-20{
+      @apply text-sm sm:text-base md:text-lg xl:text-xl
+    }
+    .text-24{
+      @apply text-base sm:text-lg md:text-xl xl:text-2xl
+    }
+    .text-30{
+      @apply text-lg sm:text-xl md:text-2xl xl:text-3xl
+    }
+    .text-40{
+      @apply text-2xl md:text-3xl xl:text-4xl
+    }
+    .text-50{
+      @apply text-3xl xl:text-5xl leading-normal
+    }
+    .text-60{
+      @apply text-3xl md:text-4xl lg:text-6xl leading-normal
+    }
+  }
+  .skeleton{
+      overflow: hidden;
+      position: relative;
+      background-color: #6d6d6d7a;
+  }
+
+  .skeleton::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -150px;
+    top: 0;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient(to right, transparent 0%, #6d6d6d 50%, transparent 100%);
+    animation: load 1s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+}
+
+@keyframes load {
+    from {
+        left: -150px;
+    }
+    to   {
+        left: 100%;
+    }
+}
+
+.close{
+    background-color: #031827;
+}
+
+.blockchain--bg--img{
+    background: url('../src/assets/media/patterns/blockchain-pattern.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.truncated-text{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+
+
+.mySwiper2 img{
+  margin: 0 auto;
+}
+
+.mySwiper{
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.mySwiper img{
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.mySwiper .swiper-slide {
+  height: 100%;
+  opacity: 0.3;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+
